@@ -1,0 +1,14 @@
+{
+  "name": "MariaDB Devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--network", "host"
+  ],
+  "settings": {
+    "mysql.defaultUser": "root",
+    "mysql.defaultPassword": "rootpassword"
+  },
+  "postCreateCommand": "docker run --name mariadb -e MYSQL_ROOT_PASSWORD=rootpassword -d mariadb:10.11"
+}

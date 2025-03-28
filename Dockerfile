@@ -1,0 +1,3 @@
+FROM mariadb:10.11
+EXPOSE 3306
+ENV MYSQL_ROOT_PASSWORD=rootpassword
